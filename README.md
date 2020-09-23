@@ -1,6 +1,6 @@
 # Reinforcement Learning for Logistics
 
-This repo contains a gym environment representing a chaotic warehouse, a DQN Agent provided by the library stable-baselines (https://stable-baselines.readthedocs.io) and a simplified implementation of an Intrinsic Curiosity Module (https://pathak22.github.io/noreward-rl/).
+This repo contains a gym environment representing a chaotic warehouse, a DQN Agent provided by the library stable-baselines (https://stable-baselines.readthedocs.io) and a simplified implementation of the Intrinsic Curiosity Module (https://pathak22.github.io/noreward-rl/).
 
 This work was a collaboration between TUM students (Anja Kirschner, Leo
 Tappe and Victor Caceres) from different disciplines and myself, under the guidance of the company MaibornWolff GmbH.
