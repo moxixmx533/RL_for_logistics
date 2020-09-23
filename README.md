@@ -1,5 +1,11 @@
-# gym-warehouse
-A gym environment representing a chaotic warehouse.
+# Reinforcement Learning for Logistics
+
+This repo contains a gym environment representing a chaotic warehouse, a DQN Agent provided by the library stable-baselines (https://stable-baselines.readthedocs.io) and a simplified implementation of an Intrinsic Curiosity Module (https://pathak22.github.io/noreward-rl/).
+
+This work was a collaboration between TUM students (Anja Kirschner, Leo
+Tappe and Victor Caceres) from different disciplines and myself, under the guidance of the company MaibornWolff GmbH.
+
+For a detailed explanation of the project and its implementation, please visit https://www.di-lab.tum.de/en/past-projects/maibornwolff-multi-agent-reinforcement-learning-for-logistics/.
 
 Details about this implementation:
 
@@ -7,17 +13,16 @@ State:
 
 -Agent Position    
 -Agent Status    
--StagingIn    
--StagingOut    
--BinStatus    
+-StagingIn (place where the incoming item are)    
+-StagingOut (place where the outcoming items are)
+-BinStatus (places where the items are located inside the warehouse)
 -Timestep     
 
 
-This implementation uses a Box Space (Continuous Space) instead of a Multidiscrete space, but applies a one-hot encoding to all the
-variables except the Timestep.
+This implementation uses a Box Space (Continuous Space) instead of a Multidiscrete space, but applies a one-hot encoding to all the variables except the Timestep.
 
 Actions:
-LEFT,RIGHT,UP,DOWN + Agent_slots x bin_slots 
+LEFT,RIGHT,UP,DOWN + Agent_slots x bin_slots
 
 Particularities    
 -No Stay Command    
@@ -30,17 +35,17 @@ Particularities
 
 
 ## Setup
-Make sure you have Python 3.6 or later installed.
+To run the code, create a virtual environment using Anaconda and Python 3.7
 
 1. Clone the repo
 ```
-git clone git@gitlab.lrz.de:dilab-20-multi-agent-rl/gym-warehouse.git
-cd gym-warehouse
+git clone https://github.com/andresbecker/RL_for_logistics.git
+cd RL_for_logistics
 ```
 2. Create a new virtual environment
 ```
-python3 -m venv .venv
-source .venv/bin/activate
+conda create --name conda_rl python=3.7
+conda activate conda_rl
 ```
 3. Install the dependencies
 ```
@@ -53,26 +58,12 @@ pip install -e .
 ```
 
 ## Running
-You can use the `main.py` script to train a DQN on a warehouse.
-For example, you can train a DQN on the `two-slots.json` environment for
-`200000` steps and with an exploration fraction of `0.3` and save the model
-into a file called `my-model.zip` by running
+Train a DQN on a warehouse just by typing
 ```
-python main.py --train --steps 200000 --explore 0.2 two-slots my-model
+python Train_model.py
 ```
-Or, using the short versions,
-```
-python main.py -t -s 200000 -e 0.2 two-slots my-model
-```
+
 Your model will be saved to the `models` directory.
-To watch its performance, you can run
-```
-python main.py two-slots my-model
-```
-To see a list of all options, run
-```
-python main.py -h
-```
 
 ## Documentation
 You can generate documentation for the entire project by running `make html`
