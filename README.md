@@ -2,6 +2,10 @@
 
 This repo contains a gym environment representing a chaotic warehouse, a DQN Agent provided by the library stable-baselines (https://stable-baselines.readthedocs.io) and a simplified implementation of the Intrinsic Curiosity Module (https://pathak22.github.io/noreward-rl/).
 
+<p align="center">
+  <img src="Videos/RL.gif" width="300">
+</p>
+
 This work was a collaboration between TUM students (Anja Kirschner, Leo
 Tappe and Victor Caceres) from different disciplines and myself, under the guidance of the company MaibornWolff GmbH.
 
