@@ -11,7 +11,7 @@ Tappe and Victor Caceres) from different disciplines and myself, under the guida
 
 For a detailed explanation of the project and its implementation, please visit https://www.di-lab.tum.de/en/past-projects/maibornwolff-multi-agent-reinforcement-learning-for-logistics/.
 
-Details about this implementation:
+## Details about this implementation
 
 State:
 
@@ -34,9 +34,6 @@ Particularities
 -Random Transactions (either outbound or inbound sensible transactions are generated when a transaction is completed)    
 -Timestep as part of the state    
 -The staging-out-area.status details what items are MISSING to complete the transaction    
-
-
-
 
 ## Setup
 To run the code, create a virtual environment using Anaconda and Python 3.7
