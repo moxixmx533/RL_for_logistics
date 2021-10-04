@@ -52,7 +52,7 @@ class WarehouseEnv(gym.Env):
         # Warehouse parameters
         self.num_rows = data['num_rows']
         self.num_cols = data['num_cols']
-        self.num_items = data['num_items']
+        self.num_items = data['num_items'] #商品的类型数量，比如有3种
         self.num_agent_slots = data['num_agent_slots']
         self.num_bin_slots = data['num_bin_slots']
         self.num_bins = data['num_bins']
